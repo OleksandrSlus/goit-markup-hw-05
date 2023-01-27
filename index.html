@@ -60,7 +60,9 @@
       <section class="section hero">
         <div class="container">
           <h1 class="heading">Effective Solutions for Your Business</h1>
-          <button class="first-btn" type="button">Order Service</button>
+          <button class="first-btn" data-modal-open type="button">
+            Order Service
+          </button>
         </div>
       </section>
       <section class="section future">
@@ -422,5 +424,17 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop
+     is-hidden" data-modal
+     >
+      <div class="modal">
+        <button class="modal-close" data-modal-close type="button">
+          <svg class="close-icon" width="8" height="8">
+            <use href="./images/svg-modal-icon.svg#icon-cross"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

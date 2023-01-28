@@ -99,24 +99,24 @@ address {
   color: var(--centrocolor-color);
   text-decoration: none;
   transition: var(--transition-efect);
+  transition-property: color;
+}
+.header-link:is(:focus, :hover) {
+  color: var(--hovercolor-color);
 }
 .current {
   position: relative;
-  color: #404bbf;
+  color: var(--hovercolor-color);
 }
 .current::after {
   position: absolute;
   content: "";
   width: 100%;
   left: 0;
-  bottom: 0;
-  top: 28px;
+  bottom: -28px;
   height: 4px;
   border-radius: 2px;
-  background-color: #4d5ae5;
-}
-.header-link:is(:focus, :hover) {
-  color: var(--hovercolor-color);
+  background-color: var(--btncolor-color);
 }
 .adress-ul a {
   font-style: normal;
@@ -125,6 +125,7 @@ address {
   color: var(--secondcolor-color);
   text-decoration: none;
   transition: var(--transition-efect);
+  transition-property: color;
 }
 .adress-ul a:hover,
 .adress-ul a:focus {
@@ -173,9 +174,10 @@ address {
   background: var(--btncolor-color);
   cursor: pointer;
   transition: var(--transition-efect);
+  transition-property: background-color;
 }
 .first-btn:hover {
-  background: var(--hovercolor-color);
+  background-color: var(--hovercolor-color);
 }
 
 /*--------------Section2---------------*/
@@ -267,16 +269,17 @@ address {
 .soc-link {
   width: 100%;
   height: 100%;
-  background-color: #4d5ae5;
+  background-color: var(--btncolor-color);
   display: block;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: var(--transition-efect);
+  transition-property: background-color;
 }
 .soc-link:is(:focus, :hover) {
-  background: #404bbf;
+  background-color: var(--hovercolor-color);
 }
 /*-----------------section4---------*/
 
@@ -289,6 +292,7 @@ address {
   justify-content: center;
   align-items: center;
   transition: var(--transition-efect);
+  transition-property: border-color, fill;
 }
 .customers-box:is(:focus, :hover) {
   border-color: var(--hovercolor-color);
@@ -297,10 +301,9 @@ address {
   fill: var(--hovercolor-color);
 }
 .customers-icon {
-  transition: var(--transition-efect);
-}
-.customers-icon {
   fill: var(--greay-color);
+  transition: var(--transition-efect);
+  transition-property: fill;
 }
 .customers-icon:is(:hover) {
   fill: var(--hovercolor-color);
@@ -318,8 +321,7 @@ address {
 }
 .footer-box {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  align-items: baseline;
 }
 .footer-text {
   max-width: 300px;
@@ -347,9 +349,10 @@ address {
 .soc-color {
   background-color: rgba(255, 255, 255, 0.1);
   transition: var(--transition-efect);
+  transition-property: background-color;
 }
 .soc-color:is(:focus, :hover) {
-  background: #31d0aa;
+  background-color: #31d0aa;
 }
 /*--------------page2-------------*/
 
@@ -364,6 +367,7 @@ address {
   background-color: var(--graylight-color);
   border-color: var(--greay-color);
   transition: var(--transition-efect);
+  transition-property: color, background-color, border-radius;
 }
 .btn-ul button:is(:hover, :focus) {
   color: var(--fonokolor-color);
@@ -403,16 +407,18 @@ address {
 .card-link {
   text-decoration: none;
   transition: var(--transition-efect);
+  transition-property: transform;
+}
+.card-link:is(:focus, :hover) .toptext-card {
+  transform: translate(0, 0);
 }
 .li-card {
   transition: var(--transition-efect);
+  transition-property: box-shadow;
 }
 .li-card:is(:focus, :hover) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-.card-link:is(:focus, :hover) .toptext-card {
-  transform: translate(0, 0);
 }
 .toptext-card {
   position: absolute;
@@ -444,6 +450,7 @@ address {
   height: 100%;
   background: rgba(100, 97, 97, 0.63);
   transition: var(--transition-efect);
+  transition-property: opacity, visibility;
 }
 .modal {
   position: absolute;

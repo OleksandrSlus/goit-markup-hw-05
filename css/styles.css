@@ -27,6 +27,8 @@ body {
   --greay-color: #8e8f99;
   --gradi: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
   --transition-efect: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-time: 250ms;
+  --transition-bezir: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -98,8 +100,7 @@ address {
   letter-spacing: 0.02em;
   color: var(--centrocolor-color);
   text-decoration: none;
-  transition: var(--transition-efect);
-  transition-property: color;
+  transition: color var(--transition-efect);
 }
 .header-link:is(:focus, :hover) {
   color: var(--hovercolor-color);
@@ -124,8 +125,7 @@ address {
   letter-spacing: 0.02em;
   color: var(--secondcolor-color);
   text-decoration: none;
-  transition: var(--transition-efect);
-  transition-property: color;
+  transition: color var(--transition-efect);
 }
 .adress-ul a:hover,
 .adress-ul a:focus {
@@ -173,8 +173,7 @@ address {
   color: var(--fonokolor-color);
   background: var(--btncolor-color);
   cursor: pointer;
-  transition: var(--transition-efect);
-  transition-property: background-color;
+  transition: background-color var(--transition-efect);
 }
 .first-btn:hover {
   background-color: var(--hovercolor-color);
@@ -275,8 +274,7 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: var(--transition-efect);
-  transition-property: background-color;
+  transition: background-color var(--transition-efect);
 }
 .soc-link:is(:focus, :hover) {
   background-color: var(--hovercolor-color);
@@ -291,8 +289,9 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: var(--transition-efect);
-  transition-property: border-color, fill;
+  transition-property: border-color fill;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-bezir);
 }
 .customers-box:is(:focus, :hover) {
   border-color: var(--hovercolor-color);
@@ -302,8 +301,7 @@ address {
 }
 .customers-icon {
   fill: var(--greay-color);
-  transition: var(--transition-efect);
-  transition-property: fill;
+  transition: fill var(--transition-efect);
 }
 .customers-icon:is(:hover) {
   fill: var(--hovercolor-color);
@@ -348,8 +346,7 @@ address {
 
 .soc-color {
   background-color: rgba(255, 255, 255, 0.1);
-  transition: var(--transition-efect);
-  transition-property: background-color;
+  transition: background-color var(--transition-efect);
 }
 .soc-color:is(:focus, :hover) {
   background-color: #31d0aa;
@@ -366,8 +363,9 @@ address {
   color: var(--btncolor-color);
   background-color: var(--graylight-color);
   border-color: var(--greay-color);
-  transition: var(--transition-efect);
-  transition-property: color, background-color, border-radius;
+  transition-property: color background-color border-radius;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-bezir);
 }
 .btn-ul button:is(:hover, :focus) {
   color: var(--fonokolor-color);
@@ -406,15 +404,13 @@ address {
 }
 .card-link {
   text-decoration: none;
-  transition: var(--transition-efect);
-  transition-property: transform;
+  transition: transform var(--transition-efect);
 }
 .card-link:is(:focus, :hover) .toptext-card {
   transform: translate(0, 0);
 }
 .li-card {
-  transition: var(--transition-efect);
-  transition-property: box-shadow;
+  transition: box-shadow var(--transition-efect);
 }
 .li-card:is(:focus, :hover) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -425,8 +421,6 @@ address {
   width: 100%;
   height: 100%;
   overflow: auto;
-  transform: translate(0, 100%);
-  transition: transform 500ms linear;
   left: 0;
   top: 0;
   line-height: 1.5;
@@ -436,6 +430,8 @@ address {
   padding-right: 32px;
   background-color: #4d5ae5bd;
   color: var(--graylight-color);
+  transform: translate(0, 100%);
+  transition: transform 500ms linear;
 }
 .div-img-text {
   position: relative;
@@ -449,8 +445,9 @@ address {
   width: 100%;
   height: 100%;
   background: rgba(100, 97, 97, 0.63);
-  transition: var(--transition-efect);
   transition-property: opacity, visibility;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-bezir);
 }
 .modal {
   position: absolute;

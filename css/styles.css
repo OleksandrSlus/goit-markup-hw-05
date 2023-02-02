@@ -289,7 +289,7 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-property: border-color fill;
+  transition-property: border-color, fill;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-bezir);
 }
@@ -363,7 +363,7 @@ address {
   color: var(--btncolor-color);
   background-color: var(--graylight-color);
   border-color: var(--greay-color);
-  transition-property: color background-color border-radius;
+  transition-property: color, background-color, border-radius;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-bezir);
 }
